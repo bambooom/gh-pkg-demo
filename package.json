@@ -1,5 +1,5 @@
 {
-  "name": "gh-pkg-demo",
+  "name": "@bambooom/gh-pkg-demo",
   "version": "1.0.0",
   "description": "example package to try github packages",
   "main": "index.js",
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bambooom/gh-pkg-demo.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "author": "bambooom",
   "license": "ISC",
