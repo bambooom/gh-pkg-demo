@@ -1,0 +1,19 @@
+{
+  "name": "gh-pkg-demo",
+  "version": "1.0.0",
+  "description": "example package to try github packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bambooom/gh-pkg-demo.git"
+  },
+  "author": "bambooom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bambooom/gh-pkg-demo/issues"
+  },
+  "homepage": "https://github.com/bambooom/gh-pkg-demo#readme"
+}
