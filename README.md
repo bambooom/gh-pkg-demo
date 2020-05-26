@@ -4,7 +4,7 @@ Example package to use GitHub Package Registry.
 
 ## How to use GitHub Package Registry
 
-1. [Generate Personal Access Token](https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages#about-tokens)
+### 1. [Generate Personal Access Token](https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages#about-tokens)
 
 - To download and install packages from GitHub Package Registry, you need a token with `read:packages` and `repo` scopes.
 - To upload and publish packages, you need a token with `write:packages` and `repo` scopes.
@@ -12,7 +12,7 @@ Example package to use GitHub Package Registry.
 
 Generate the token according to your need.
 
-2. Local config TOKEN
+### 2. Local config TOKEN
 
 Add the generated token to the local file `~/.npmrc` like:
 
@@ -31,7 +31,7 @@ $ npm login --registry=https://npm.pkg.github.com
 > Email: PUBLIC-EMAIL-ADDRESS
 ```
 
-3. Project Config to publish to GitHub
+### 3. Project Config to publish to GitHub
 
 [Edit the `package.json` file to specify the registry as GitHub](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#publishing-a-package-using-publishconfig-in-the-packagejson-file).
 And also the package name must be scoped with the onwer.
@@ -51,7 +51,7 @@ That is adding a local `.npmrc` under project root, and adding this to the file:
 registry=https://npm.pkg.github.com/OWNER
 ```
 
-4. Publish packages
+### 4. Publish packages
 To publish the package to GitHub, just use the command:
 
 ```
@@ -62,7 +62,7 @@ You can see the package on GitHub:
 
 ![](./gh-pkg.png)
 
-5. Install packages
+### 5. Install packages
 
 To install packages from GitHub package registry, need a local `.npmrc` file to set the registry.
 
@@ -93,6 +93,16 @@ Then use the command to install:
 
 ```
 npm install @bambooom/gh-pkg-demo
+```
+
+Then inside `package-lock.json`, the package is resolved by GitHub registry like:
+
+```
+    "@bambooom/gh-pkg-demo": {
+      "version": "1.0.0",
+      "resolved": "https://npm.pkg.github.com/download/@bambooom/gh-pkg-demo/1.0.0/0ec13dcce4a2f9510111a8b88957c3436a0e04633d0208aa71dfa5f7804b67ff",
+      "integrity": "...."
+    },
 ```
 
 ## Refs
