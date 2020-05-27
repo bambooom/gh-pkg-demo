@@ -4,7 +4,7 @@ Example package to use GitHub Package Registry.
 
 ## How to use GitHub Package Registry
 
-### 1. [Generate Personal Access Token](https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages#about-tokens)
+### 1. Generate Personal Access Token
 
 - To download and install packages from GitHub Package Registry, you need a token with `read:packages` and `repo` scopes.
 - To upload and publish packages, you need a token with `write:packages` and `repo` scopes.
@@ -70,7 +70,7 @@ To install packages from GitHub package registry, need a local `.npmrc` file to 
 registry=https://npm.pkg.github.com/OWNER
 ```
 
-But if only using this setting, all package requests will go through GitHub Packages.
+But if this is the only setting, all package requests will go through GitHub Packages.
 
 > You also need to add the *.npmrc* file to your project so all requests to install packages will go through GitHub Packages. When you route all package requests through GitHub Packages, you can use both scoped and unscoped packages from *npmjs.com*.
 
@@ -98,13 +98,14 @@ npm install @bambooom/gh-pkg-demo
 Then inside `package-lock.json`, the package is resolved by GitHub registry like:
 
 ```
-    "@bambooom/gh-pkg-demo": {
-      "version": "1.0.0",
-      "resolved": "https://npm.pkg.github.com/download/@bambooom/gh-pkg-demo/1.0.0/0ec13dcce4a2f9510111a8b88957c3436a0e04633d0208aa71dfa5f7804b67ff",
-      "integrity": "...."
-    },
+"@bambooom/gh-pkg-demo": {
+  "version": "1.0.0",
+  "resolved": "https://npm.pkg.github.com/download/@bambooomgh-pkg-demo/1.0.00ec13dcce4a2f9510111a8b88957c3436a0e04633d0208aa71dfa5f7804b67ff",
+  "integrity": "...."
+},
 ```
 
 ## Refs
-- [About Tokens](https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages#about-tokens)
+- [GitHub Packages Tokens](https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages#about-tokens)
+- [Creating a personal access token for the command line](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 - [Configuring npm for use with GitHub Packages](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages)
